@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fei-Fei Li — Portfolio</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f9f9f9;
+        color: #222;
+      }
+      header {
+        background: #8c1515;
+        color: white;
+        padding: 2rem;
+        text-align: center;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+      }
+      nav {
+        background: #222;
+        text-align: center;
+        padding: 0.8rem;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+      nav a {
+        color: #f39c12;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 0 1rem;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+      section {
+        padding: 2rem;
+        max-width: 900px;
+        margin: auto;
+      }
+      h2 {
+        color: #8c1515;
+        margin-bottom: 0.5rem;
+      }
+      p,
+      ul {
+        margin-bottom: 1rem;
+      }
+      footer {
+        background: #222;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        margin-top: 2rem;
+      }
+      a {
+        color: #8c1515;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .toggle-btn {
+        margin-top: 1rem;
+        background: white;
+        color: #8c1515;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      .dark-mode {
+        background: #222;
+        color: white;
+      }
+      .dark-mode header {
+        background: #111;
+      }
+      .dark-mode h2 {
+        color: #f39c12;
+      }
+      .dark-mode a {
+        color: #f39c12;
+      }
+      .dark-mode .toggle-btn {
+        background: #f39c12;
+        color: #111;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Fei-Fei Li</h1>
+      <p>
+        Sequoia Capital Professor of Computer Science at Stanford University |
+        Co-Director, Stanford Human-Centered AI Institute
+      </p>
+      <button class="toggle-btn" onclick="toggleTheme()">Toggle Theme</button>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+      <a href="#about">About</a>
+      <a href="#earlylife">Early Life</a>
+      <a href="#education">Education</a>
+      <a href="#career">Career</a>
+      <a href="#imagenet">ImageNet</a>
+      <a href="#research">Research</a>
+      <a href="#awards">Awards</a>
+      <a href="#outreach">Outreach</a>
+      <a href="#publications">Publications</a>
+    </nav>
+
+    <!-- Sections -->
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        Fei-Fei Li is a Chinese-American computer scientist, author, and AI
+        researcher. She is widely recognized as one of the most influential
+        figures in Artificial Intelligence, specializing in computer vision,
+        machine learning, and cognitive neuroscience. She advocates for
+        human-centered AI and inclusive technology that benefits society.
+      </p>
+    </section>
+
+    <section id="earlylife">
+      <h2>Early Life</h2>
+      <p>
+        Fei-Fei Li was born in Beijing, China, in 1976. At the age of 16, she
+        immigrated with her family to the United States, where they initially
+        struggled financially. Despite these challenges, she excelled
+        academically while working in her family’s dry-cleaning business. Her
+        early experiences shaped her perspective on resilience, opportunity, and
+        the social impact of technology.
+      </p>
+    </section>
+
+    <section id="education" class="section">
+      <h2>Education</h2>
+      <ul>
+        <li>🎓 Ph.D. (Honorary), Harvey Mudd College, Engineering (2022)</li>
+        <li>🎓 B.A., Princeton University, Physics (1999)</li>
+        <li>
+          🎓 M.S., California Institute of Technology, Electrical Engineering
+          (2001)
+        </li>
+        <li>
+          🎓 Ph.D., California Institute of Technology, Electrical Engineering
+          (2005)
+        </li>
+      </ul>
+    </section>
+
+    <section id="career">
+      <h2>Career Highlights</h2>
+      <ul>
+        <li>Professor of Computer Science, Stanford University.</li>
+        <li>
+          Sequoia Capital Professor and Co-Director, Stanford Human-Centered AI
+          Institute.
+        </li>
+        <li>Director, Stanford AI Lab (2013–2018).</li>
+        <li>Chief Scientist of AI/ML at Google Cloud (2017–2018).</li>
+        <li>
+          Member of the U.S. National Artificial Intelligence Advisory
+          Committee.
+        </li>
+        <li>
+          Board of Trustees Member, Princeton University and several nonprofit
+          organizations.
+        </li>
+      </ul>
+    </section>
+
+    <section id="imagenet">
+      <h2>ImageNet Project</h2>
+      <p>
+        Dr. Li is best known for leading the groundbreaking
+        <strong>ImageNet project</strong>, a large-scale visual database that
+        helped train deep learning algorithms to recognize objects in images.
+        ImageNet was the catalyst for the modern deep learning revolution and
+        transformed computer vision research globally.
+      </p>
+    </section>
+
+    <section id="research">
+      <h2>Research & Contributions</h2>
+      <ul>
+        <li>Large-scale image recognition and visual understanding.</li>
+        <li>
+          Neuroscience-inspired machine learning, linking human cognition with
+          AI.
+        </li>
+        <li>
+          AI applications in healthcare, robotics, and education for social
+          good.
+        </li>
+        <li>
+          Promoting ethical, transparent, and inclusive AI development through
+          human-centered design.
+        </li>
+      </ul>
+    </section>
+
+    <section id="awards">
+      <h2>Awards</h2>
+      <ul>
+        <li>Elected to the National Academy of Engineering (2020).</li>
+        <li>Elected to the National Academy of Medicine (2020).</li>
+        <li>IEEE PAMI Distinguished Researcher Award (2022).</li>
+        <li>
+          Time 100 Most Influential People in AI and Fortune’s World’s Greatest
+          Leaders list.
+        </li>
+        <li>
+          Queen Elizabeth Prize for Engineering (2025) for contributions to
+          ImageNet and computer vision.
+        </li>
+      </ul>
+    </section>
+
+    <section id="outreach">
+      <h2>Media & Outreach</h2>
+      <p>
+        Dr. Li is committed to broadening participation in AI. She co-founded
+        <strong>AI4ALL</strong>, a nonprofit dedicated to increasing diversity
+        and inclusion in AI education. She is also an influential voice in
+        policy, advising governments and organizations on AI ethics and
+        governance. Her TED Talk on teaching computers to understand pictures
+        has been viewed millions of times worldwide.
+      </p>
+    </section>
+
+    <section id="publications">
+      <h2>Publications & Books</h2>
+      <ul>
+        <li>ImageNet: A Large-Scale Hierarchical Image Database (2009).</li>
+        <li>Reshaping AI for Human-Centered Futures (2020).</li>
+        <li>
+          Neural Mechanisms of Object Recognition in the Human Brain (2007).
+        </li>
+        <li>
+          <em
+            >The Worlds I See: Curiosity, Exploration, and Discovery at the Dawn
+            of AI</em
+          >
+          (Memoir, 2023).
+        </li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>
+        Connect:
+        <a href="https://profiles.stanford.edu/fei-fei-li" target="_blank"
+          >Stanford Profile</a
+        >
+      </p>
+      <p>&copy; 2025 Fei-Fei Li Portfolio (Unofficial)</p>
+    </footer>
+
+    <script>
+      function toggleTheme() {
+        document.body.classList.toggle("dark-mode");
+      }
+    </script>
+  </body>
+</html>

@@ -66,33 +66,6 @@
       a:hover {
         text-decoration: underline;
       }
-      .toggle-btn {
-        margin-top: 1rem;
-        background: white;
-        color: #8c1515;
-        border: none;
-        padding: 0.5rem 1rem;
-        border-radius: 5px;
-        cursor: pointer;
-        font-weight: bold;
-      }
-      .dark-mode {
-        background: #222;
-        color: white;
-      }
-      .dark-mode header {
-        background: #111;
-      }
-      .dark-mode h2 {
-        color: #f39c12;
-      }
-      .dark-mode a {
-        color: #f39c12;
-      }
-      .dark-mode .toggle-btn {
-        background: #f39c12;
-        color: #111;
-      }
       html {
         scroll-behavior: smooth;
       }
@@ -105,7 +78,6 @@
         Sequoia Capital Professor of Computer Science at Stanford University |
         Co-Director, Stanford Human-Centered AI Institute
       </p>
-      <button class="toggle-btn" onclick="toggleTheme()">Toggle Theme</button>
     </header>
 
     <!-- Navigation -->
@@ -268,11 +240,5 @@
       </p>
       <p>&copy; 2025 Fei-Fei Li Portfolio (Unofficial)</p>
     </footer>
-
-    <script>
-      function toggleTheme() {
-        document.body.classList.toggle("dark-mode");
-      }
-    </script>
   </body>
 </html>

@@ -12,16 +12,21 @@
         background-color: #f9f9f9;
         color: #222;
       }
+
       header {
         background: #8c1515;
         color: white;
         padding: 2rem;
         text-align: center;
+        position: relative;
+        z-index: 10;
       }
+
       header h1 {
         margin: 0;
         font-size: 2.5rem;
       }
+
       nav {
         background: #222;
         text-align: center;
@@ -30,28 +35,53 @@
         top: 0;
         z-index: 1000;
       }
+
       nav a {
         color: #f39c12;
         text-decoration: none;
         font-weight: bold;
         margin: 0 1rem;
+        display: inline-block;
+        padding: 0.5rem 1rem;
       }
+
       nav a:hover {
         text-decoration: underline;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
       }
+
       section {
         padding: 2rem;
         max-width: 900px;
         margin: auto;
+        overflow: auto;
       }
+
       h2 {
         color: #8c1515;
         margin-bottom: 0.5rem;
+        counter-increment: section-counter;
       }
+
+      h2::before {
+        content: "§" counter(section-counter) " ";
+        color: #f39c12;
+      }
+
       p,
       ul {
         margin-bottom: 1rem;
       }
+
+      ul li {
+        margin-bottom: 0.5rem;
+      }
+
+      ul li:hover {
+        background: #f2f2f2;
+      }
+
       footer {
         background: #222;
         color: white;
@@ -59,15 +89,49 @@
         padding: 1rem;
         margin-top: 2rem;
       }
+
       a {
-        color: #8c1515;
+        color: #8c1515 !important;
         text-decoration: none;
       }
+
       a:hover {
         text-decoration: underline;
       }
+
       html {
         scroll-behavior: smooth;
+      }
+
+      /* Float Box */
+      .float-box {
+        float: right;
+        width: 40%;
+        margin: 1rem;
+        background: #eee;
+        padding: 1rem;
+        border-radius: 5px;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Float Box Left */
+      .float-box-left {
+        float: left;
+        width: 40%;
+        margin: 1rem;
+        background: #eee;
+        padding: 1rem;
+        border-radius: 5px;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      /* CSS math function */
+      .math-box {
+        width: calc(100% - 4rem);
+        margin: 2rem auto;
+        background: #f4f4f4;
+        padding: 1rem;
+        border-left: 5px solid #8c1515;
       }
     </style>
   </head>
@@ -96,28 +160,35 @@
     <!-- Sections -->
     <section id="about">
       <h2>About</h2>
-      <p>
+      <p class="float-box">
         Fei-Fei Li is a Chinese-American computer scientist, author, and AI
         researcher. She is widely recognized as one of the most influential
         figures in Artificial Intelligence, specializing in computer vision,
         machine learning, and cognitive neuroscience. She advocates for
         human-centered AI and inclusive technology that benefits society.
       </p>
+      <p>
+        Fun Fact: she also served as Chief Scientist of AI/ML at Google Cloud
+        and is the director of the Stanford Artificial Intelligence Laboratory
+        from 2013 to 2018.
+      </p>
     </section>
 
     <section id="earlylife">
       <h2>Early Life</h2>
+      <p class="float-box-left">
+        Born in Beijing in 1976, Fei-Fei Li immigrated to the US at 16. She
+        worked in her family’s dry-cleaning business while excelling
+        academically, which shaped her resilience and perspective on the social
+        impact of technology.
+      </p>
       <p>
-        Fei-Fei Li was born in Beijing, China, in 1976. At the age of 16, she
-        immigrated with her family to the United States, where they initially
-        struggled financially. Despite these challenges, she excelled
-        academically while working in her family’s dry-cleaning business. Her
-        early experiences shaped her perspective on resilience, opportunity, and
-        the social impact of technology.
+        Her early life experiences motivated her to create technology that is
+        inclusive and socially beneficial.
       </p>
     </section>
 
-    <section id="education" class="section">
+    <section id="education">
       <h2>Education</h2>
       <ul>
         <li>🎓 Ph.D. (Honorary), Harvey Mudd College, Engineering (2022)</li>
@@ -135,6 +206,11 @@
 
     <section id="career">
       <h2>Career Highlights</h2>
+      <p class="float-box">
+        Fei-Fei Li served as Professor at Stanford, Director of Stanford AI Lab,
+        Chief Scientist of AI at Google Cloud, and Co-Director of Stanford
+        Human-Centered AI Institute.
+      </p>
       <ul>
         <li>Professor of Computer Science, Stanford University.</li>
         <li>
@@ -156,60 +232,60 @@
 
     <section id="imagenet">
       <h2>ImageNet Project</h2>
-      <p>
-        Dr. Li is best known for leading the groundbreaking
-        <strong>ImageNet project</strong>, a large-scale visual database that
-        helped train deep learning algorithms to recognize objects in images.
-        ImageNet was the catalyst for the modern deep learning revolution and
-        transformed computer vision research globally.
-      </p>
+      <div class="math-box">
+        Fei-Fei Li led the <strong>ImageNet Project</strong>, creating a
+        large-scale visual database that trained deep learning algorithms to
+        recognize images. This project revolutionized computer vision globally.
+      </div>
     </section>
 
     <section id="research">
       <h2>Research & Contributions</h2>
+      <p class="float-box-left">
+        Fei-Fei Li researches large-scale image recognition,
+        neuroscience-inspired AI, healthcare and robotics applications, and
+        promotes ethical AI through human-centered design.
+      </p>
       <ul>
         <li>Large-scale image recognition and visual understanding.</li>
         <li>
-          Neuroscience-inspired machine learning, linking human cognition with
+          Neuroscience-inspired machine learning linking human cognition with
           AI.
         </li>
-        <li>
-          AI applications in healthcare, robotics, and education for social
-          good.
-        </li>
-        <li>
-          Promoting ethical, transparent, and inclusive AI development through
-          human-centered design.
-        </li>
+        <li>AI applications in healthcare, robotics, and education.</li>
+        <li>Promoting ethical, transparent, and inclusive AI development.</li>
       </ul>
     </section>
 
     <section id="awards">
       <h2>Awards</h2>
+      <p class="float-box">
+        Recognized globally, she is a member of the National Academy of
+        Engineering & Medicine, has won IEEE awards, and is on Time 100 and
+        Fortune’s leaders list.
+      </p>
       <ul>
         <li>Elected to the National Academy of Engineering (2020).</li>
         <li>Elected to the National Academy of Medicine (2020).</li>
         <li>IEEE PAMI Distinguished Researcher Award (2022).</li>
         <li>
           Time 100 Most Influential People in AI and Fortune’s World’s Greatest
-          Leaders list.
+          Leaders.
         </li>
-        <li>
-          Queen Elizabeth Prize for Engineering (2025) for contributions to
-          ImageNet and computer vision.
-        </li>
+        <li>Queen Elizabeth Prize for Engineering (2025).</li>
       </ul>
     </section>
 
     <section id="outreach">
       <h2>Media & Outreach</h2>
+      <p class="float-box-left">
+        She co-founded <strong>AI4ALL</strong>, promoting diversity and
+        inclusion in AI, advises on AI policy and ethics, and her TED Talk has
+        millions of views.
+      </p>
       <p>
-        Dr. Li is committed to broadening participation in AI. She co-founded
-        <strong>AI4ALL</strong>, a nonprofit dedicated to increasing diversity
-        and inclusion in AI education. She is also an influential voice in
-        policy, advising governments and organizations on AI ethics and
-        governance. Her TED Talk on teaching computers to understand pictures
-        has been viewed millions of times worldwide.
+        Fei-Fei Li is committed to creating a human-centered AI ecosystem for
+        education, research, and social good.
       </p>
     </section>
 
@@ -234,11 +310,13 @@
     <footer>
       <p>
         Connect:
-        <a href="https://profiles.stanford.edu/fei-fei-li" target="_blank"
-          >Stanford Profile</a
-        >
+        <a href="https://profiles.stanford.edu/fei-fei-li" target="_blank">
+          Stanford Profile
+        </a>
       </p>
       <p>&copy; 2025 Fei-Fei Li Portfolio (Unofficial)</p>
     </footer>
   </body>
 </html>
+
+
